@@ -1,0 +1,13 @@
+name: print-hello-world
+
+on: push
+
+jobs:
+  print-to-console-job:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: check out repo code
+        uses: actions/checkout@v6
+      - run: echo "$(cat hello_world.txt)"
